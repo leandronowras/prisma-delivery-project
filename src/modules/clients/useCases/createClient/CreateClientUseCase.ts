@@ -22,7 +22,7 @@ export class CreateClientUseCase {
 
         const hashPassword = await hash(password, 10)
 
-        const client = await prisma.client.create({
+        const client = await prisma.clients.create({
             data: {
                 username,
                 password: hashPassword
